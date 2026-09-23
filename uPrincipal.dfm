@@ -1,7 +1,7 @@
-object Form1: TForm1
+object frmPrincipal: TfrmPrincipal
   Left = 0
   Top = 0
-  Caption = 'Form1'
+  Caption = 'Menu Principal'
   ClientHeight = 441
   ClientWidth = 624
   Color = clBtnFace
@@ -10,5 +10,54 @@ object Form1: TForm1
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Menu = mainPrincipal
+  WindowState = wsMaximized
   TextHeight = 15
+  object mainPrincipal: TMainMenu
+    Left = 40
+    Top = 40
+    object CADASTRO1: TMenuItem
+      Caption = 'CADASTRO'
+      object CLIENTE1: TMenuItem
+        Caption = 'CLIENTE'
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object CATEGORIA1: TMenuItem
+        Caption = 'CATEGORIA'
+      end
+      object PRODUTO1: TMenuItem
+        Caption = 'PRODUTO'
+      end
+      object N2: TMenuItem
+        Caption = '-'
+      end
+      object mnuFechar: TMenuItem
+        Caption = 'FECHAR'
+        OnClick = mnuFecharClick
+      end
+    end
+    object MOVIMENTAO1: TMenuItem
+      Caption = 'MOVIMENTA'#199#195'O'
+      object VENDAS1: TMenuItem
+        Caption = 'VENDAS'
+      end
+    end
+    object RELATRIOS1: TMenuItem
+      Caption = 'RELAT'#211'RIOS'
+      object CLIENTE2: TMenuItem
+        Caption = 'CLIENTE'
+      end
+      object N3: TMenuItem
+        Caption = '-'
+      end
+      object PRODUTO2: TMenuItem
+        Caption = 'PRODUTO'
+      end
+      object VENDAPORDATA1: TMenuItem
+        Caption = 'VENDA POR DATA'
+      end
+    end
+  end
 end
