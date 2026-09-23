@@ -1,0 +1,124 @@
+############################################
+# Delphi / RAD Studio - Professional Gitignore
+# Embarcadero standard (adapted for GitHub)
+############################################
+
+############################
+# Build Output (ALL PLATFORMS)
+############################
+
+Win32/
+Win64/
+Win64\Debug/
+Win64\Release/
+Win32\Debug/
+Win32\Release/
+Debug/
+Release/
+Android/
+Android64/
+iOSDevice32/
+iOSDevice64/
+OSX64/
+
+*.exe
+*.dll
+*.bpl
+*.dylib
+*.so
+
+############################
+# Delphi Compiled Units
+############################
+
+*.dcu
+*.dcp
+*.dpu
+*.o
+*.obj
+*.rsm
+*.map
+*.tds
+
+############################
+# Delphi Project / IDE Files
+############################
+
+*.identcache
+*.local
+*.stat
+*.dsk
+*.tvsconfig
+*.otares
+
+# History / Recovery (VERY IMPORTANT)
+__history/
+*.~*
+
+############################
+# Delphi Project Files (keep ONLY main ones)
+############################
+
+# Keep these in repo (DO NOT ignore):
+# *.dpr
+# *.pas
+# *.dfm
+# *.fmx
+# *.dproj
+# *.res
+
+############################
+# Backup / Temporary files
+############################
+
+*.*~
+*.bak
+*.tmp
+
+############################
+# Logs
+############################
+
+*.log
+*.txt.log
+
+############################
+# Windows / OS noise
+############################
+
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+############################
+# Package Manager (Delphi-specific optional)
+############################
+
+packages/
+dcc64.cfg
+dcc32.cfg
+
+############################
+# PAServer / Remote deployment artifacts
+############################
+
+PAServer/
+*.deployproj
+
+############################
+# FMX / Mobile cache artifacts
+############################
+
+local-android/
+local-ios/
+
+############################
+# Optional: Test / Coverage tools
+############################
+
+coverage/
+*.cov
+
+############################################
+# END
+############################################
