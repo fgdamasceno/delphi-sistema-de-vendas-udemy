@@ -3,7 +3,7 @@ program Vendas;
 uses
   Vcl.Forms,
   uPrincipal in 'uPrincipal.pas' {frmPrincipal},
-  uDtmConexao in 'dataModule\uDtmConexao.pas' {dtmConexao: TDataModule};
+  uDtmConexao in 'dataModule\uDtmConexao.pas' {dtmPrincipal: TDataModule};
 
 {$R *.res}
 
@@ -11,6 +11,5 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
-  Application.CreateForm(TdtmConexao, dtmConexao);
   Application.Run;
 end.

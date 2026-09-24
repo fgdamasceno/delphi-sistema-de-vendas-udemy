@@ -12,6 +12,7 @@ object frmPrincipal: TfrmPrincipal
   Font.Style = []
   Menu = mainPrincipal
   WindowState = wsMaximized
+  OnCreate = FormCreate
   TextHeight = 15
   object mainPrincipal: TMainMenu
     Left = 40
