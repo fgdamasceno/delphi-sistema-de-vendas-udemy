@@ -3,12 +3,6 @@ object dtmPrincipal: TdtmPrincipal
   Width = 1000
   PixelsPerInch = 120
   object ConexaoDB: TFDConnection
-    Params.Strings = (
-      'User_Name=postgres'
-      'Password=fgd1788'
-      'Server=localhost'
-      'DriverID=PG')
-    Connected = True
     LoginPrompt = False
     Left = 48
     Top = 32

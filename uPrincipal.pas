@@ -68,7 +68,8 @@ begin
       LoginPrompt := False;
       Connected := True;
 
-      ShowMessage('Conectado com bando de dados com sucesso!');
+      //Mensagem para confirmar a conexão
+      //ShowMessage('Conectado com bando de dados com sucesso!');
     end;
   finally
     ArquivoIni.Free;
