@@ -1,4 +1,4 @@
-object PAG: TPAG
+object frmTelaHeranca: TfrmTelaHeranca
   Left = 0
   Top = 0
   BorderStyle = bsDialog
@@ -12,6 +12,7 @@ object PAG: TPAG
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnCreate = FormCreate
   TextHeight = 15
   object pgcPrincipal: TPageControl
     Left = 0
@@ -34,14 +35,14 @@ object PAG: TPAG
         object mskPesquisar: TMaskEdit
           Left = 0
           Top = 30
-          Width = 705
+          Width = 399
           Height = 23
           TabOrder = 0
           Text = ''
           TextHint = 'Digite sua pesquisa'
         end
         object btnPesquisar: TBitBtn
-          Left = 711
+          Left = 405
           Top = 29
           Width = 106
           Height = 25
@@ -55,6 +56,7 @@ object PAG: TPAG
         Width = 980
         Height = 305
         Align = alClient
+        DataSource = dtsListagem
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
@@ -123,14 +125,26 @@ object PAG: TPAG
       Height = 25
       Caption = '&FECHAR'
       TabOrder = 5
+      OnClick = btnFecharClick
     end
     object btnNavigator: TDBNavigator
       Left = 409
       Top = 26
       Width = 224
       Height = 25
+      DataSource = dtsListagem
       VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
       TabOrder = 6
     end
+  end
+  object qryListagem: TFDQuery
+    Connection = dtmPrincipal.ConexaoDB
+    Left = 548
+    Top = 42
+  end
+  object dtsListagem: TDataSource
+    DataSet = qryListagem
+    Left = 628
+    Top = 42
   end
 end

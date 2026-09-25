@@ -135,7 +135,7 @@
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="heranca\uTelaHeranca.pas">
-            <Form>PAG</Form>
+            <Form>frmTelaHeranca</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">
