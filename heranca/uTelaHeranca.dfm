@@ -94,14 +94,14 @@ object frmTelaHeranca: TfrmTelaHeranca
       TabOrder = 1
       OnClick = btnAlterarClick
     end
-    object btnCANCELAR: TBitBtn
+    object btnCancelar: TBitBtn
       Left = 166
       Top = 26
       Width = 75
       Height = 25
       Caption = '&CANCELAR'
       TabOrder = 2
-      OnClick = btnCANCELARClick
+      OnClick = btnCancelarClick
     end
     object btnGravar: TBitBtn
       Left = 247
