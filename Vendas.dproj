@@ -142,6 +142,7 @@
             <Form>frmCadCategoria</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="terceiros\Enter.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
