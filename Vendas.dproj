@@ -138,6 +138,11 @@
             <Form>frmTelaHeranca</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Cadastro\uCadCategoria.pas">
+            <Form>frmCadCategoria</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Terceiros\Enter.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
