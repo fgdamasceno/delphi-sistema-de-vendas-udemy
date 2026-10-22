@@ -2,7 +2,8 @@ program Vendas;
 
 uses
   Vcl.Forms,
-  uPrincipal in 'uPrincipal.pas' {frmPrincipal};
+  uPrincipal in 'uPrincipal.pas' {frmPrincipal},
+  uDtmConexao in 'DataModule\uDtmConexao.pas' {dtmPrincipal: TDataModule};
 
 {$R *.res}
 
