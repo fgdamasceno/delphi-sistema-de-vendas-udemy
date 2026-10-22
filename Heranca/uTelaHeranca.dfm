@@ -12,6 +12,7 @@ object frmTelaHeranca: TfrmTelaHeranca
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnCreate = FormCreate
   TextHeight = 15
   object pgcPrincipal: TPageControl
     Left = 0
@@ -55,6 +56,7 @@ object frmTelaHeranca: TfrmTelaHeranca
         Width = 1000
         Height = 399
         Align = alClient
+        DataSource = dtsListagem
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
@@ -75,9 +77,10 @@ object frmTelaHeranca: TfrmTelaHeranca
     Height = 71
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 509
+    ExplicitLeft = 8
+    ExplicitTop = 510
     object btnNovo: TBitBtn
-      Left = 21
+      Left = 13
       Top = 24
       Width = 75
       Height = 25
@@ -85,7 +88,7 @@ object frmTelaHeranca: TfrmTelaHeranca
       TabOrder = 0
     end
     object btnAlterar: TBitBtn
-      Left = 110
+      Left = 119
       Top = 24
       Width = 75
       Height = 25
@@ -93,7 +96,7 @@ object frmTelaHeranca: TfrmTelaHeranca
       TabOrder = 1
     end
     object btnCancelar: TBitBtn
-      Left = 200
+      Left = 225
       Top = 24
       Width = 75
       Height = 25
@@ -101,7 +104,7 @@ object frmTelaHeranca: TfrmTelaHeranca
       TabOrder = 2
     end
     object btnGravar: TBitBtn
-      Left = 288
+      Left = 332
       Top = 24
       Width = 75
       Height = 25
@@ -109,7 +112,7 @@ object frmTelaHeranca: TfrmTelaHeranca
       TabOrder = 3
     end
     object btnApagar: TBitBtn
-      Left = 376
+      Left = 438
       Top = 24
       Width = 75
       Height = 25
@@ -123,14 +126,27 @@ object frmTelaHeranca: TfrmTelaHeranca
       Height = 25
       Caption = '&FECHAR'
       TabOrder = 5
+      OnClick = btnFecharClick
     end
     object btnNavigator: TDBNavigator
-      Left = 461
+      Left = 545
       Top = 24
       Width = 224
       Height = 25
+      DataSource = dtsListagem
       VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
       TabOrder = 6
     end
+  end
+  object qryListagem: TZQuery
+    Connection = dtmPrincipal.ConexaoDB
+    Params = <>
+    Left = 620
+    Top = 34
+  end
+  object dtsListagem: TDataSource
+    DataSet = qryListagem
+    Left = 724
+    Top = 34
   end
 end
