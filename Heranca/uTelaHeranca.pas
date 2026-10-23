@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Buttons, Vcl.DBCtrls,
   Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Mask, Vcl.ComCtrls, Vcl.ExtCtrls,
-  ZAbstractRODataset, ZAbstractDataset, ZDataset, uDtmConexao;
+  ZAbstractRODataset, ZAbstractDataset, ZDataset, uDtmConexao, uEnum;
 
 type
   TfrmTelaHeranca = class(TForm)
@@ -71,8 +71,6 @@ begin
   btnCancelar.Enabled := not(Flag);
   btnGravar.Enabled := not(Flag);
 end;
-
-
 
 procedure TfrmTelaHeranca.ControlarIndiceTab(pgcPrincipal: TPageControl; Indice: Integer);
 begin
