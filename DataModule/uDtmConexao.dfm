@@ -7,14 +7,18 @@ object dtmPrincipal: TdtmPrincipal
     Catalog = ''
     Properties.Strings = (
       'RawStringEncoding=DB_CP')
+    Connected = True
     SQLHourGlass = True
     DisableSavepoints = False
-    HostName = ''
-    Port = 0
-    Database = ''
-    User = ''
-    Password = ''
+    HostName = 'localhost'
+    Port = 5432
+    Database = 'vendas'
+    User = 'postgres'
+    Password = 'fgd1788'
     Protocol = 'postgresql'
+    LibraryLocation = 
+      'C:\dev\workspace\Delphi\projetos\Delphi Sistema de Vendas Udemy\' +
+      'Win32\Debug\libpq.dll'
     Left = 80
     Top = 56
   end

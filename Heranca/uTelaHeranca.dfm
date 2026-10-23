@@ -4,7 +4,7 @@ object frmTelaHeranca: TfrmTelaHeranca
   BorderStyle = bsDialog
   Caption = 'INFORME AQUI O T'#205'TULO'
   ClientHeight = 579
-  ClientWidth = 1008
+  ClientWidth = 1027
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,56 +12,71 @@ object frmTelaHeranca: TfrmTelaHeranca
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnClose = FormClose
   OnCreate = FormCreate
+  OnShow = FormShow
   TextHeight = 15
   object pgcPrincipal: TPageControl
     Left = 0
     Top = 0
-    Width = 1008
+    Width = 1027
     Height = 508
-    ActivePage = tabManutencao
+    ActivePage = tabListagem
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 1008
     object tabListagem: TTabSheet
       Caption = 'LIstagem'
       object pnlListagemTopo: TPanel
         Left = 0
         Top = 0
-        Width = 1000
+        Width = 1019
         Height = 79
         Align = alTop
         TabOrder = 0
+        ExplicitWidth = 1000
+        object lblIndice: TLabel
+          Left = 25
+          Top = 16
+          Width = 104
+          Height = 15
+          Caption = 'Campo de Pesquisa'
+        end
         object mskPesquisar: TMaskEdit
           Left = 25
-          Top = 27
+          Top = 37
           Width = 401
           Height = 23
           TabOrder = 0
           Text = ''
           TextHint = 'Digite sua Pesquisa'
+          OnChange = mskPesquisarChange
         end
         object btnPesquisar: TBitBtn
           Left = 457
-          Top = 26
+          Top = 36
           Width = 75
           Height = 25
-          Caption = '&Pesquisar'
+          Caption = '&PESQUISAR'
           TabOrder = 1
+          Visible = False
         end
       end
       object grdListagem: TDBGrid
         Left = 0
         Top = 79
-        Width = 1000
+        Width = 1019
         Height = 399
         Align = alClient
         DataSource = dtsListagem
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -12
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
+        OnTitleClick = grdListagemTitleClick
       end
     end
     object tabManutencao: TTabSheet
@@ -72,10 +87,14 @@ object frmTelaHeranca: TfrmTelaHeranca
   object pnlRodape: TPanel
     Left = 0
     Top = 508
-    Width = 1008
+    Width = 1027
     Height = 71
     Align = alBottom
     TabOrder = 1
+    ExplicitWidth = 1008
+    DesignSize = (
+      1027
+      71)
     object btnNovo: TBitBtn
       Left = 13
       Top = 24
@@ -122,10 +141,11 @@ object frmTelaHeranca: TfrmTelaHeranca
       OnClick = btnApagarClick
     end
     object btnFechar: TBitBtn
-      Left = 912
+      Left = 934
       Top = 24
       Width = 75
       Height = 25
+      Anchors = [akTop, akRight]
       Caption = '&FECHAR'
       TabOrder = 5
       OnClick = btnFecharClick

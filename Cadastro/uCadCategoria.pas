@@ -10,6 +10,9 @@ uses
 
 type
   TfrmCadCategoria = class(TfrmTelaHeranca)
+    qryListagemcategoriaid: TZIntegerField;
+    qryListagemdescricao: TZUnicodeStringField;
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -22,5 +25,11 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmCadCategoria.FormCreate(Sender: TObject);
+begin
+  inherited;
+  IndiceAtual := 'descricao';
+end;
 
 end.
